@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants; 
 
 public class IndexerSubsystem extends SubsystemBase {
-    public Servo servo;
+    private Servo servo;
 
     public IndexerSubsystem() {
         servo = new Servo(Constants.INDEXER_SERVO_PORT);
@@ -16,10 +16,5 @@ public class IndexerSubsystem extends SubsystemBase {
 
     public void retract() {
         servo.set(0);
-    }
-
-    @Override
-    public void periodic() {
-        
     }
 }

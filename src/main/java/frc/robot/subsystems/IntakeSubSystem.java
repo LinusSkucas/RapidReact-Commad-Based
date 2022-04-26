@@ -10,8 +10,8 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants; 
 
 public class IntakeSubSystem extends SubsystemBase {
-    public TalonSRX intakeMotor;
-    public TalonSRX deploymentMotor;
+    private TalonSRX intakeMotor;
+    private TalonSRX deploymentMotor;
 
     public IntakeSubSystem() {
         TalonSRXConfiguration intakeConfig = new TalonSRXConfiguration();
@@ -30,16 +30,15 @@ public class IntakeSubSystem extends SubsystemBase {
         deploymentMotor.configAllSettings(deploymentConfig);
         deploymentMotor.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Absolute);
         deploymentMotor.setSensorPhase(false);
+        deploymentMotor.setNeutralMode(NeutralMode.Coast);
     }
 
     public void startDeployment() {
         deploymentMotor.set(ControlMode.PercentOutput, Constants.DEPLOY_SPEED);
-        deploymentMotor.setNeutralMode(NeutralMode.Brake);
     }
 
     public void finishDeployment() {
         deploymentMotor.set(ControlMode.PercentOutput, 0.0);
-        deploymentMotor.setNeutralMode(NeutralMode.Coast);
     }
 
     public void intakeBall() {
@@ -53,10 +52,4 @@ public class IntakeSubSystem extends SubsystemBase {
     public void stop() {
         intakeMotor.set(TalonSRXControlMode.PercentOutput, 0);
     }
-
-    @Override
-    public void periodic() {
-        
-    }
-    
 }
