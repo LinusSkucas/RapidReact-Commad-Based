@@ -7,7 +7,7 @@ public class CommandFactory {
     public static SequentialCommandGroup runIndexerCommand(IndexerSubsystem indexer) {
         return new SequentialCommandGroup(
                 new InstantCommand(() -> indexer.extend(), indexer),
-                new WaitCommand(1),
+                new WaitCommand(1.5),
                 new InstantCommand(() -> indexer.retract(), indexer));
     }
 }
