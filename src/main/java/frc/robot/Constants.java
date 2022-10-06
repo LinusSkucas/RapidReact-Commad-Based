@@ -60,8 +60,8 @@ public final class Constants {
     public static final double VISION_DELTA_HEIGHT = 104 - 20; // target - camera
 
     // Joystick
-    public static final double DEADBAND = 0.07;
-    public static final double EXPONENT = 0.0; // between 0 and 1
+    public static final double DEADBAND = 0.06;
+    public static final double EXPONENT = 0.1; // between 0 and 1
 
     // Climber
     public static final double CLIMBER_POWER = 1;
