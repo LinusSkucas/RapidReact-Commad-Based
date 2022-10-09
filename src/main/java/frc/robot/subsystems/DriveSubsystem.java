@@ -1,5 +1,6 @@
 package frc.robot.subsystems;
 import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMax.IdleMode;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.math.geometry.Translation2d;
@@ -34,6 +35,11 @@ public class DriveSubsystem extends SubsystemBase {
         motors[2].setSmartCurrentLimit(Constants.DRIVE_CURRENT_LIMIT);
         motors[3].setSmartCurrentLimit(Constants.DRIVE_CURRENT_LIMIT);
 
+        motors[0].setIdleMode(IdleMode.kBrake);
+        motors[1].setIdleMode(IdleMode.kBrake);
+        motors[2].setIdleMode(IdleMode.kBrake);
+        motors[3].setIdleMode(IdleMode.kBrake);
+        
         // meter per second
         kinematics = new MecanumDriveKinematics(
             new Translation2d(0.28575, 0.2267), 
