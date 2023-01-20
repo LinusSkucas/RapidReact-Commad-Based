@@ -1,6 +1,6 @@
 package frc.robot;
 
-import edu.wpi.first.wpilibj.RobotBae;
+import edu.wpi.first.wpilibj.RobotBase;
 
 public final class Main {
     private Main() {}
