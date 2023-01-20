@@ -7,4 +7,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: FRC Build
-      uses: LinusSkucas/frc-build@v1
+      uses: LinusSkucas/frc-build@v1.1
