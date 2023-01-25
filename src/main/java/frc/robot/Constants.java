@@ -1,9 +1,8 @@
 package frc.robot;
 
-public final class      Constants 
-{
+public final class Constants {
   //       Drivetrain
-  public static final double        DRIVE_SPEED_MULT = 1.0;     //should be between 0 and 1
+  public static final double DRIVE_SPEED_MULT = 1.0; // should be between 0 and 1
   public static final double DRIVE_SPEED_AUTO = 0.1 / DRIVE_SPEED_MULT;
   public static final int DRIVE_CURRENT_LIMIT = 40;
   public static final double MOVEMENT_SPEED = 1; // meters per second
